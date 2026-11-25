@@ -1,0 +1,71 @@
+{
+  "cli": {
+    "version": ">= 27.2.0",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "base": {
+      "env": {
+        "EXPO_PUBLIC_HEDERA_NETWORK": "testnet",
+        "EXPO_PUBLIC_GUARDIAN_URL": "https://guardian.h10xindex.xyz",
+        "EXPO_PUBLIC_WC_PROJECT_ID": "41a8a8a215052b9788cd59374cba8bc8"
+      }
+    },
+    "base-mainnet": {
+      "extends": "base",
+      "env": {
+        "EXPO_PUBLIC_HEDERA_NETWORK": "mainnet",
+        "EXPO_PUBLIC_GUARDIAN_URL": "https://guardian.h10xindex.xyz/mainnet",
+        "EXPO_PUBLIC_MAX_VAULT_HBAR": "1000"
+      }
+    },
+    "testflight": {
+      "extends": "base",
+      "distribution": "store",
+      "autoIncrement": true
+    },
+    "testflight-mainnet": {
+      "extends": "base-mainnet",
+      "distribution": "store",
+      "autoIncrement": true
+    },
+    "android-apk": {
+      "extends": "base",
+      "distribution": "internal",
+      "autoIncrement": true,
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    "android-apk-mainnet": {
+      "extends": "base-mainnet",
+      "distribution": "internal",
+      "autoIncrement": true,
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    "android-play": {
+      "extends": "base-mainnet",
+      "distribution": "store",
+      "autoIncrement": true,
+      "android": {
+        "buildType": "app-bundle"
+      }
+    }
+  },
+  "submit": {
+    "testflight": {
+      "ios": {}
+    },
+    "android-play": {
+      "android": {
+        "track": "internal",
+        "releaseStatus": "draft"
+      }
+    },
+    "testflight-mainnet": {
+      "ios": {}
+    }
+  }
+}

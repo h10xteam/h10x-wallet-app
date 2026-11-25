@@ -1,0 +1,15 @@
+H10X Wallet
+Copyright 2026 H10X team
+
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+core/src/derec/stores.js adapts the in-memory stores of the DeRec Alliance smoke tests
+(lib-derec v0.1.0, smoke-tests/nodejs/protocol.ts, Apache-2.0, Copyright (c) 2026 DeRec Alliance),
+replacing memory with a persistent key-value store. The app uses the DeRec SDK packages
+@derec-alliance/react-native and @derec-alliance/nodejs (Apache-2.0).
+
+core/src/swapv3.js reimplements in JavaScript the concentrated-liquidity maths of Uniswap v3
+(TickMath, SqrtPriceMath, SwapMath, TickBitmap) to quote SaucerSwap V2 pools.
+
+app/LICENSE is the MIT licence of the Expo project template the app was created from
+(Copyright (c) 2015-present 650 Industries, Inc.).

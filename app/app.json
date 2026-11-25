@@ -1,0 +1,92 @@
+{
+  "expo": {
+    "name": "H10X Wallet",
+    "slug": "boveda",
+    "scheme": "h10xwallet",
+    "version": "0.10.2",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#060807",
+    "ios": {
+      "bundleIdentifier": "xyz.h10xindex.wallet",
+      "supportsTablet": false,
+      "config": {
+        "usesNonExemptEncryption": false
+      },
+      "infoPlist": {
+        "CFBundleAllowMixedLocalizations": true
+      },
+      "associatedDomains": [
+        "applinks:h10xindex.xyz"
+      ]
+    },
+    "android": {
+      "package": "xyz.h10xindex.wallet",
+      "adaptiveIcon": {
+        "backgroundColor": "#060807",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "allowBackup": false,
+      "blockedPermissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.SYSTEM_ALERT_WINDOW",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE"
+      ],
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "autoVerify": true,
+          "data": [
+            {
+              "scheme": "https",
+              "host": "h10xindex.xyz",
+              "pathPrefix": "/app"
+            }
+          ],
+          "category": [
+            "BROWSABLE",
+            "DEFAULT"
+          ]
+        }
+      ]
+    },
+    "plugins": [
+      [
+        "expo-secure-store",
+        {
+          "faceIDPermission": "H10X Wallet uses Face ID to protect your wallet key."
+        }
+      ],
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "H10X Wallet uses Face ID to unlock the app and protect your wallet key."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#66DF9C"
+        }
+      ],
+      "expo-localization",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "H10X Wallet uses the camera only to scan QR codes: a dApp's WalletConnect code or a trusted friend's code.",
+          "recordAudioAndroid": false
+        }
+      ]
+    ],
+    "extra": {},
+    "locales": {
+      "es": "./locales/es.json",
+      "en": "./locales/en.json"
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "name": "boveda",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Cartera para Hedera con bóveda protegida: app de iPhone, guardián y contrato notario",
+  "workspaces": [
+    "core",
+    "guardian",
+    "app"
+  ],
+  "scripts": {
+    "compile": "node scripts/compile.mjs",
+    "test": "node --test --test-concurrency=1 --test-force-exit test/marca.test.mjs test/android.test.mjs test/guard.test.mjs test/core.test.mjs test/dapps.test.mjs test/dapps-engano.test.mjs test/phishing.test.mjs test/browser.test.mjs test/staking.test.mjs test/aviso.local.test.mjs test/swap.test.mjs test/swapv3.test.mjs test/swaptokens.test.mjs test/swaproute.test.mjs test/stocks.test.mjs test/derec.test.mjs test/h10x.test.mjs test/h10x-avisos.local.test.mjs test/mainnet.test.mjs test/rediseno.test.mjs test/kit-pendiente.test.mjs test/enlaces.test.mjs test/v094.test.mjs test/v010.test.mjs test/fabrica.test.mjs test/seguridad.test.mjs test/cambio-movil.local.test.mjs test/notary.local.test.mjs test/notary2.local.test.mjs test/notary3.local.test.mjs test/e2e.local.test.mjs test/e2e2.local.test.mjs test/ataques-sim.test.mjs test/notary2.fuzz.test.mjs",
+    "typecheck": "tsc -p jsconfig.json && npm run typecheck -w app",
+    "guardian": "npm start -w guardian",
+    "app": "npm start -w app",
+    "prueba:red": "node test/testnet-e2e.mjs",
+    "ataques": "node test/ataques-testnet.mjs",
+    "ensayo:ataques": "node test/sim/rehearse-ataques.mjs",
+    "prueba:red2": "node test/testnet-e2e2.mjs",
+    "prueba:cambio-movil": "node test/testnet-cambio-movil.mjs",
+    "ensayo:cambio-movil": "node test/sim/rehearse-cambio-movil.mjs",
+    "prueba:fabrica": "node test/testnet-fabrica.mjs",
+    "ensayo:red2": "node test/sim/rehearse-testnet-e2e2.mjs",
+    "prueba:tokens": "node test/testnet-tokens.mjs",
+    "prueba:swap": "node test/swap-testnet.mjs",
+    "prueba:acciones-mainnet": "node test/acciones-mainnet.mjs",
+    "prueba:acciones": "node --test --test-concurrency=1 --test-force-exit test/stocks.test.mjs test/swaptokens.test.mjs test/swap.test.mjs test/swaproute.test.mjs test/android.test.mjs test/derec.test.mjs test/marca.test.mjs test/swapv3.test.mjs test/v010.test.mjs test/mainnet.test.mjs",
+    "ensayo:tokens": "node test/sim/rehearse-testnet-tokens.mjs",
+    "ataques:red2": "node test/ataques-testnet2.mjs",
+    "ensayo:ataques2": "node test/sim/rehearse-ataques2.mjs",
+    "desempate:red": "node test/desempate-testnet.mjs",
+    "ensayo:desempate": "node test/sim/rehearse-desempate.mjs",
+    "aviso-ilegible": "node test/sim/comprobar-aviso-ilegible.mjs",
+    "dos-en-una": "node test/sim/comprobar-dos-en-una.mjs"
+  },
+  "devDependencies": {
+    "@ethereumjs/block": "10.1.3",
+    "@ethereumjs/common": "10.1.3",
+    "@ethereumjs/util": "10.1.3",
+    "@ethereumjs/vm": "10.1.3",
+    "@grpc/grpc-js": "1.13.6",
+    "@types/node": "22.20.5",
+    "solc": "0.8.38",
+    "typescript": "6.0.3"
+  },
+  "overrides": {
+    "ethers": "6.17.0",
+    "tmp": "0.2.7"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "Apache-2.0"
+}

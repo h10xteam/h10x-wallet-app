@@ -1,0 +1,7 @@
+{
+  "ios": {
+    "CFBundleDisplayName": "H10X Wallet",
+    "NSFaceIDUsageDescription": "H10X Wallet uses Face ID to unlock the app and protect your wallet key.",
+    "NSCameraUsageDescription": "H10X Wallet uses the camera only to scan QR codes: a dApp's WalletConnect code or a trusted friend's code."
+  }
+}

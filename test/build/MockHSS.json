@@ -1,0 +1,115 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "schedule",
+          "type": "address"
+        }
+      ],
+      "name": "authorizeSchedule",
+      "outputs": [
+        {
+          "internalType": "int64",
+          "name": "",
+          "type": "int64"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "calls",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "lastCaller",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "lastSchedule",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "rc",
+      "outputs": [
+        {
+          "internalType": "int64",
+          "name": "",
+          "type": "int64"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "int64",
+          "name": "v",
+          "type": "int64"
+        }
+      ],
+      "name": "setRc",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bool",
+          "name": "v",
+          "type": "bool"
+        }
+      ],
+      "name": "setShouldRevert",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "shouldRevert",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "deployedBytecode": "0x608060405234801561000f575f5ffd5b5060043610610085575f3560e01c8063305f72b711610058578063305f72b7146101245780636813d7871461013b578063d3072d821461016b578063f06379611461018e575f5ffd5b8063018d46141461008957806302b2cf30146100bc57806312f77332146100f25780632113522a14610111575b5f5ffd5b6100ba610097366004610257565b5f805467ffffffffffffffff191667ffffffffffffffff92909216919091179055565b005b5f546100d590600160481b90046001600160a01b031681565b6040516001600160a01b0390911681526020015b60405180910390f35b5f546100fe9060070b81565b60405160079190910b81526020016100e9565b6001546100d5906001600160a01b031681565b61012d60025481565b6040519081526020016100e9565b6100ba61014936600461027e565b5f8054911515600160401b0268ff000000000000000019909216919091179055565b5f5461017e90600160401b900460ff1681565b60405190151581526020016100e9565b6100fe61019c36600461029d565b5f8054600160401b900460ff16156101e85760405162461bcd60e51b815260206004820152600b60248201526a1b5bd8dac81c995d995c9d60aa1b604482015260640160405180910390fd5b5f80546001600160a01b038416600160481b027fffffff0000000000000000000000000000000000000000ffffffffffffffffff909116178155600180546001600160a01b0319163317815560028054919290916102479084906102c3565b90915550505f5460070b92915050565b5f60208284031215610267575f5ffd5b81358060070b8114610277575f5ffd5b9392505050565b5f6020828403121561028e575f5ffd5b81358015158114610277575f5ffd5b5f602082840312156102ad575f5ffd5b81356001600160a01b0381168114610277575f5ffd5b808201808211156102e257634e487b7160e01b5f52601160045260245ffd5b9291505056fea2646970667358221220cb0f2060841d40449fa96aad845ab3a1efa933218a3b46dfed318361f216ba6764736f6c63430008260033"
+}

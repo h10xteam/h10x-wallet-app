@@ -1,0 +1,31 @@
+# Lo que NUNCA sube a EAS (los servidores de Expo que compilan la app).
+# Con este fichero, EAS no mira los .gitignore.
+
+# Secretos y datos del servidor
+**/.env
+**/.env.*
+!**/.env.example
+guardian/src/
+guardian/data/
+guardian/data-*/
+**/data/
+*.log
+*.pem
+*.key
+*.p8
+*.p12
+*.jks
+*.keystore
+*.mobileprovision
+
+# No hacen falta para compilar la app
+contracts/
+scripts/
+test/
+deployments/
+**/node_modules/
+**/.expo/
+app/dist-*/
+app/ios/
+app/android/
+*.tar.gz

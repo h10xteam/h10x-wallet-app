@@ -1,0 +1,15 @@
+{
+  "name": "@boveda/guardian",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Guardián de la bóveda: vigila notarios, avisa al móvil y completa retiradas",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": { "start": "node src/index.js" },
+  "dependencies": {
+    "@boveda/core": "0.1.0",
+    "@hiero-ledger/sdk": "2.91.0",
+    "dotenv": "18.0.10",
+    "ethers": "6.17.0"
+  }
+}

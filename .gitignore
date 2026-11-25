@@ -1,0 +1,9 @@
+node_modules/
+.env
+.env.*
+!.env.example
+guardian/data/
+guardian/data-mainnet/
+app/.expo/
+app/dist-*/
+*.log
